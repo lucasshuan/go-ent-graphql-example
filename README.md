@@ -49,7 +49,7 @@ Adding new functionality is fairly simple: To create a new database entity (in t
 
 You will notice that a new file is generated in directory **./ent/schema**. Read more about what Fields and Edges are here.
 
-    ```go
+    ```golang
     // User holds the schema definition for the Group entity.
     type Item struct {
         ent.Schema
