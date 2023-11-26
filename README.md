@@ -29,15 +29,15 @@ This project serves as an accessible and extensible example and template for a G
 
 3. Start Docker containers:
 
-```bash
-make docker-up
-```
+    ```bash
+    make docker-up
+    ```
 
 4. Start the server:
 
-```bash
-make server
-```
+    ```bash
+    make server
+    ```
 
 ## Usage
 
