@@ -15,7 +15,7 @@ func main() {
 		// Tell Ent to generate a GraphQL schema for
 		// the Ent schema in a file named ent.graphql.
 		entgql.WithSchemaGenerator(),
-		entgql.WithSchemaPath("ent.graphql"),
+		entgql.WithSchemaPath("graphql/schema/ent.graphql"),
 		entgql.WithConfigPath("gqlgen.yml"),
 	)
 	if err != nil {

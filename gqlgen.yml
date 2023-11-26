@@ -1,16 +1,21 @@
 # schema tells gqlgen where the GraphQL schema is located.
 schema:
-  - ent.graphql
+  - ent/ent.graphql
+  - graphql/schema/*.graphql
 
 exec:
   layout: follow-schema
-  dir: graphql
-  package: graphql
+  dir: graphql/generated
+  package: generated
 
 # Enable Apollo federation support
 federation:
-  filename: graphql/federation.go
-  package: graphql  
+  filename: graphql/generated/federation.go
+  package: generated
+
+model:
+  filename: graphql/model/models_gen.go
+  package: model
 
 # resolver reports where the resolver implementations go.
 resolver:
