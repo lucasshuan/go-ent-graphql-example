@@ -5,7 +5,7 @@
 
 ## About
 
-This project serves as an accessible and extensible example and template for a GraphQL server. Its primary goal is to dismiss the often intricate initial setup involved in configuring **ent** (an entity framework) and **gqlgen** (a GraphQL code generator) together. Once the setup is complete and the generated files are configured, adding new features becomes remarkably straightforward.
+This project serves as an accessible and extensible example and template for a GraphQL server. Its primary goal is to dismiss the often intricate initial setup involved in configuring **ent** (an entity framework) and **gqlgen** (a GraphQL code generator), since once the setup is complete adding new features becomes remarkably straightforward.
 
 ## Prerequisites
 
@@ -42,9 +42,7 @@ This project serves as an accessible and extensible example and template for a G
 
 ## Usage
 
-Adding new functionality is fairly simple: For adding new types, queries, mutations, and etc. to the project, one can create a new **./graphql/schema/*.graphql** file (preferably do not edit the **ent.graphql** file). Resolvers will be created in **./graphql/resolvers** directory for each new file, where you will be able to implement all of your queries and mutations.
-
-To create a new database entity, just run the following command and enter a name when name input is asked. In this example, we are creating an **Item** entity.
+Adding new functionality is fairly simple: To create a new database entity (in this example, we are creating an **Item** entity), just run the following command and enter a name when name input is asked:
 
     ```bash
     make entity
@@ -83,4 +81,4 @@ The `go generate .` command auto-migrates your database tables for every **./ent
     }
     ```
 
-The code block above adds the default queries and mutations to be added to your **./graphql/schema/ent.graphql** schema when running the command `go generate .`.
+The code block adds the default queries and mutations to be added to your **./graphql/schema/ent.graphql** schema when running the command `go generate .`. Resolvers will be created in **./graphql/resolvers** directory for each new file, where you will be able to implement all of your queries and mutations.
