@@ -1,0 +1,43 @@
+# schema tells gqlgen where the GraphQL schema is located.
+schema:
+  - ent.graphql
+
+exec:
+  layout: follow-schema
+  dir: graphql
+  package: graphql
+
+# Enable Apollo federation support
+federation:
+  filename: graphql/federation.go
+  package: graphql  
+
+# resolver reports where the resolver implementations go.
+resolver:
+  layout: follow-schema
+  dir: graphql/resolvers
+  package: graphql
+  filename_template: "{name}.resolvers.go"
+  # Optional: turn on to not generate template comments above resolvers
+  # omit_template_comment: false
+  # Optional: Pass in a path to a new gotpl template to use for generating resolvers
+  # resolver_template: [your/path/resolver.gotpl]
+
+# gqlgen will search for any type names in the schema in these go packages
+# if they match it will use them, otherwise it will generate them.
+
+# autobind tells gqlgen to search for any type names in the GraphQL schema in the
+# provided package. If they match it will use them, otherwise it will generate new.
+autobind:
+  - go-ent-graphql-example/ent
+  - go-ent-graphql-example/ent/user
+
+# This section declares type mapping between the GraphQL and Go type systems.
+models:
+  # Defines the ID field as Go 'int'.
+  ID:
+    model:
+      - github.com/99designs/gqlgen/graphql.Int
+  Node:
+    model:
+      - go-ent-graphql-example/ent.Noder
