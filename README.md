@@ -1,6 +1,5 @@
 <div align="center">
    <img src="https://github.com/lucasshuan/lucasshuan/assets/78228526/250d306c-c9d7-4b9a-990a-120a8028e881"><br>
-   <h1>B2C E-commerce API</h1>
 </div>
 
 ## About
