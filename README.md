@@ -47,7 +47,7 @@ Adding new functionality is fairly simple: To create a new database entity (in t
 make entity
 ```
 
-You will notice that a new file is generated in directory **./ent/schema**. Read more about what Fields and Edges are [here](https://entgo.io/docs/schema-def).
+You will notice that a new file is generated in directory **./ent/schema**. Read more about what [Fields](https://entgo.io/docs/schema-fields) and [Edges](https://entgo.io/docs/schema-edges) are.
 
 ```go
 type Item struct {
