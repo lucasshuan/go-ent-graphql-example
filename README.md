@@ -47,7 +47,7 @@ Adding new functionality is fairly simple: To create a new database entity (in t
 <br>
 
 ```bash
-make entity
+make entity Item
 ```
 
 <br>
